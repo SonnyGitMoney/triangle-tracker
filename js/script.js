@@ -1,6 +1,6 @@
 window.onload = function() {
   let form = document.querySelector("form");
-  form.onsubmit = function(event) {
+  form.addEventListener("submit",function(event) {
   event.preventDefault();
   
 
@@ -15,18 +15,13 @@ if (side1 === side2 && side2 === side3) {
   document.getElementById("equilateral").removeAttribute("class");
 } else if(side1 === side2 || side2 === side3 || side3 === side1) {
   document.getElementById("isosceles").removeAttribute("class");
-} else if(side1 !== side2 && side2 !== side3 && side3 !== side1) {
-  document.getElementById("scalene").removeAttribute("class");
-} else if(side1 + side2 <= side3 || side2 + side3 <= side1 || side1 + side3 <= side2) {
+} else if((side1 + side2) <= side3 || (side2 + side3) <= side1 || (side1 + side3) <= side2) {
   document.getElementById("not-triangle").removeAttribute("class");
+} else {
+  document.getElementById("scalene").removeAttribute("class");
 }
-
-}
-}
-
+});
+};
 
 
 
-
-
-//set values to traingles type
