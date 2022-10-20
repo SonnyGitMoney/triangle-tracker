@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Triangle Tracker!</title>
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="/js/script.js"></script>
+</head>
+<body>
+  <h1>Track dat tri!</h1>
+  <h2>Enter side lengths in whole numbers.</h2>
+  <form>
+    <label for="side1input">Side 1</label>
+    <input id="side1input" type="text" name="side1input">
+    <label for="side2input">Side 2</label>
+    <input id="side2input" type="text" name="side2input">
+    <label for="side3input">Side 3</label>
+    <input id="side3input" type="text" name="side3input">
+    <button type="submit">Show me dat tri!</button>
+  </form>
+
+  <div id="equilateral" class="hidden">
+    <p>Equilateral!</p>
+  </div>
+
+  <div id="isosceles" class="hidden">
+    <p>Isosceles!</p>
+  </div>
+
+  <div id="scalene" class="hidden">
+    <p>Scalene!</p>
+  </div>
+
+  <div id="not-triangle" class="hidden">
+    <p>Not a triangle!...sorry bro</p>
+  </div>
+
+</body>
+</html>
